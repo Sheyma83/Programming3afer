@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Javascript calculator</title>
+</head>
+<script>
+  function calculator(operation){
+    var num1 = parseInt(document.getElementById('num1').value),
+        num2 = parseInt(document.getElementById('num2').value),
+        result, check;
+		validation(num1,num2);
+    if (operation == 'add') {
+      result = num1 + num2;
+    }
+    if (operation == 'subtract') {
+      result = num1 - num2;
+    }
+    if (operation == 'multiply') {
+      result = num1 * num2;
+    }
+    if (operation == 'division') {
+      result = num1 / num2;
+    }
+
+    document.getElementById('operation').innerText = operation;
+    document.getElementById('resulttext').innerText = result;
+  }
+	function validation(num1,num2){
+		alert(num1+ " | " + num2 );
+	}
+</script>
+<style>
+#checked{
+	color:green;
+}
+#unchecked{
+	color:gray;
+}
+#num1error,#num2error{
+	color:red;
+}
+</style>
+<body>
+<div id="main">
+<h1>Javascript Example 1 </h1>
+<div id="require">
+	<h3>Requirement</h3>
+	<ol>
+	<h4><li id="checked"> &#10004; Complete the missing function calculator including this operation (+, -, *, /) </li></h4>
+	<h4><li id="checked"> &#10004; inside div result, i want to see the operation mode , and the result of this operation</li></h4>
+	<h4><li id="checked"> &#10004; after completing the task comment this part </li></h4>
+	<h4><li id="unchecked"> &#10060; Validate the input field to accept only Integer otherwise give an error message next to wrong input </li></h4>
+	</ol>
+</div>
+<div id="task">
+<label for="num1">Insert First Number: </label><input type="text" name="num1" value="" id="num1" maxlength="30" placeholder="Please Enter number"/><span id="num1error"></span><br>
+<label for="num2">Insert Second Number: </label><input type="text" name="num2" value="" id="num2" maxlength="30" placeholder="Please Enter number"/><span id="num2error"></span><br>
+<input type="button" name="add" id="add" value="+" onclick="calculator('add');"/>
+<input type="button" name="subtract" id="subtract" value="-" onclick="calculator('subtract');"/>
+<input type="button" name="multiply" id="multiply" value="*" onclick="calculator('multiply');"/>
+<input type="button" name="division" id="division" value="/" onclick="calculator('division');"/>
+</div>
+</div>
+<div id="result">
+	<h3>Your Operation is: <span id="operation"> </span></h3>
+	<h3>Result is: <span id="resulttext"> </span></h3>
+</div>
+</body>
+</html>
