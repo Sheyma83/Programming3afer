@@ -9,6 +9,9 @@
         num2 = parseInt(document.getElementById('num2').value),
         result;
 		if(validation(num1,num2)){
+			document.getElementById('num1error').innerText='';
+			document.getElementById('num2error').innerText='';
+			
 			if (operation == 'add') {
 	      result = num1 + num2;
 	    }
