@@ -22,7 +22,7 @@ function todolist(){
 	*/
 	var ul = document.getElementById("todolist");
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode("- " + item));
+	li.appendChild(document.createTextNode(item));
 	ul.appendChild(li);
 	document.getElementById("todoinput").value = "";
 	li.onclick = removeItem;
