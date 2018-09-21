@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8/">
+        <meta name="description" content="how we can made todolist"/>
+        <title>todo list</title>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <div class="to">
+            <h2 class="todo">to do list app</h2>
+            <form id="todoform">
+            <input id="todoinput" type="text" placeholder="write your todolist"
+				   />
+            <button type="button" onclick="todolist()">save it </button>
+			<button type="button" onclick="editLi()">EDIT</button>
+            </form>
+            <ol id="todolist">
+				
+            </ol>
+        </div>
+		
+		<script src="index.js"></script>
+    </body>
+</html>
