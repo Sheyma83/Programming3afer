@@ -28,6 +28,7 @@ function todolist(){
 	del.title = "Remove item";
 	del.href = "#";
 	li.appendChild(document.createTextNode(item));
+	li.appendChild(del);
 	ul.appendChild(li);
 	document.getElementById("todoinput").value = "";
 	del.onclick = removeItem;
