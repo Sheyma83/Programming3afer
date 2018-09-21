@@ -22,11 +22,15 @@ function todolist(){
 	*/
 	var ul = document.getElementById("todolist");
 	var li = document.createElement("li");
-	item = item + "<a href=# onclick=test();>x</a>"
+	var del = document.createElement('a');
+	var linkText = document.createTextNode("Delete");
+	del.appendChild(linkText);
+	del.title = "Remove item";
+	del.href = "#";
 	li.appendChild(document.createTextNode(item));
 	ul.appendChild(li);
 	document.getElementById("todoinput").value = "";
-	li.onclick = removeItem;
+	del.onclick = removeItem;
 	
 }
 function removeItem(e) {
@@ -37,9 +41,7 @@ document.body.onkeyup = function(e) {
     todolist();
   }
 }
-function test(){
-	alert('hi');
-}
+
 /*
 // for the next button edit 
 
