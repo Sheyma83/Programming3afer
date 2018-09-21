@@ -31,7 +31,11 @@ function todolist(){
 function removeItem(e) {
   e.target.parentElement.removeChild(e.target);
 }
-
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 13) {
+    todolist();
+  }
+}
 /*
 // for the next button edit 
 
