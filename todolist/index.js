@@ -22,7 +22,7 @@ function todolist(){
 	*/
 	var ul = document.getElementById("todolist");
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(item));
+	li.appendChild(document.createTextNode(item+ "<a href=# onclick=test();>x</a>" ));
 	ul.appendChild(li);
 	document.getElementById("todoinput").value = "";
 	li.onclick = removeItem;
@@ -35,6 +35,9 @@ document.body.onkeyup = function(e) {
   if (e.keyCode == 13) {
     todolist();
   }
+}
+function test(){
+	alert('hi');
 }
 /*
 // for the next button edit 
