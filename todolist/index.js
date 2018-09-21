@@ -24,7 +24,7 @@ function todolist(){
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode("- " + item));
 	ul.appendChild(li);
-	document.getElementById("input").value = "";
+	document.getElementById("todoinput").value = "";
 	li.onclick = removeItem;
 	
 }
