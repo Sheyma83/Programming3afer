@@ -22,7 +22,8 @@ function todolist(){
 	*/
 	var ul = document.getElementById("todolist");
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(item+ "<a href=# onclick=test();>x</a>" ));
+	item = item + "<a href=# onclick=test();>x</a>"
+	li.appendChild(document.createTextNode(item));
 	ul.appendChild(li);
 	document.getElementById("todoinput").value = "";
 	li.onclick = removeItem;
