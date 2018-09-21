@@ -23,7 +23,7 @@ function todolist(){
 	var ul = document.getElementById("todolist");
 	var li = document.createElement("li");
 	var del = document.createElement('a');
-	var linkText = document.createTextNode("Delete");
+	var linkText = document.createTextNode(";nbsp ;nbsp X");
 	del.appendChild(linkText);
 	del.title = "Remove item";
 	del.href = "#";
@@ -35,7 +35,7 @@ function todolist(){
 	
 }
 function removeItem(e) {
-  e.target.parentElement.removeChild(e.target);
+  e.target.parentElement.removeChild(e.target.parentElement);
 }
 document.body.onkeyup = function(e) {
   if (e.keyCode == 13) {
