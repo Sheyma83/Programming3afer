@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<title>Test Javascript</title>
+	
+</head>
+<style>
+	.red {
+    text-align: center;
+    color: red;
+	}
+	.blue {
+    text-align: right;
+    color: blue;
+	}
+
+</style>
+<script>
+	function red(){
+	var par = document.getElementById("para");
+	par.classList.remove("blue");
+	par.classList.add("red");
+	}
+	function blue(){
+	var par = document.getElementById("para");
+	par.classList.remove("red");
+		par.classList.add("blue");
+	}
+</script>
 <body>
+<h1>This is example of JavaScript usage</h1>
 
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
+<p id="para">this page will change the color of this paragraph </p>
+<button onclick="red();">Red color</button> 
+<button onclick="blue();">blue color</button> 
 </body>
 </html>
